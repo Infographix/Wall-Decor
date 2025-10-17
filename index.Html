@@ -1,0 +1,1755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dossier: Methods and Protocols for Decorative Wall Design</title>
+  <meta name="description" content="A professional-grade technical reference for non-structural decorative wall treatments using accessible materials and standardized protocols." />
+  
+  <style>
+    :root {
+      --bg-page: #0a0e17;
+      --bg-card: rgba(255, 255, 255, 0.92);
+      --text-primary: #1a1f36;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border-light: rgba(226, 232, 240, 0.4);
+      --accent-blue: #667eea;
+      --accent-purple: #764ba2;
+      --accent-pink: #f093fb;
+      --note-bg: linear-gradient(135deg, #e0f2fe 0%, #fce7f3 100%);
+      --note-border: #c084fc;
+      --table-header: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%);
+      --shadow-sm: 0 2px 8px rgba(102, 126, 234, 0.08);
+      --shadow-md: 0 8px 30px rgba(102, 126, 234, 0.12);
+      --shadow-lg: 0 20px 60px rgba(102, 126, 234, 0.18);
+      --radius: 24px;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'IBM Plex Mono', Consolas, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0a0e17 0%, #1a1f36 100%);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      line-height: 1.8;
+      font-size: 16px;
+      scroll-behavior: smooth;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Animated Floating Blob Background */
+    body::before {
+      content: '';
+      position: fixed;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(240, 147, 251, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(52, 211, 153, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(251, 191, 36, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(96, 165, 250, 0.2) 0%, transparent 70%);
+      filter: blur(80px);
+      opacity: 0.6;
+      z-index: 0;
+      animation: morphBlob 25s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite alternate;
+      pointer-events: none;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 10%;
+      right: -20%;
+      width: 800px;
+      height: 800px;
+      background: 
+        linear-gradient(135deg, 
+          rgba(102, 126, 234, 0.4) 0%, 
+          rgba(240, 147, 251, 0.4) 33%,
+          rgba(52, 211, 153, 0.4) 66%,
+          rgba(251, 191, 36, 0.4) 100%);
+      border-radius: 40% 60% 70% 30% / 60% 30% 70% 40%;
+      filter: blur(100px);
+      opacity: 0.5;
+      z-index: 0;
+      animation: floatBlob 30s ease-in-out infinite alternate, 
+                 colorShift 20s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes morphBlob {
+      0% {
+        transform: translate(0%, 0%) scale(1) rotate(0deg);
+      }
+      25% {
+        transform: translate(-5%, 8%) scale(1.1) rotate(90deg);
+      }
+      50% {
+        transform: translate(5%, -5%) scale(0.95) rotate(180deg);
+      }
+      75% {
+        transform: translate(-8%, 3%) scale(1.05) rotate(270deg);
+      }
+      100% {
+        transform: translate(3%, -8%) scale(1) rotate(360deg);
+      }
+    }
+
+    @keyframes floatBlob {
+      0% {
+        transform: translate(0%, 0%) rotate(0deg);
+        border-radius: 40% 60% 70% 30% / 60% 30% 70% 40%;
+      }
+      33% {
+        transform: translate(-30%, 20%) rotate(120deg);
+        border-radius: 70% 30% 50% 50% / 30% 60% 40% 70%;
+      }
+      66% {
+        transform: translate(10%, -25%) rotate(240deg);
+        border-radius: 30% 70% 60% 40% / 50% 40% 60% 50%;
+      }
+      100% {
+        transform: translate(20%, 15%) rotate(360deg);
+        border-radius: 60% 40% 30% 70% / 40% 70% 30% 60%;
+      }
+    }
+
+    @keyframes colorShift {
+      0% {
+        background: linear-gradient(135deg, 
+          rgba(102, 126, 234, 0.4) 0%, 
+          rgba(240, 147, 251, 0.4) 100%);
+      }
+      33% {
+        background: linear-gradient(225deg, 
+          rgba(52, 211, 153, 0.4) 0%, 
+          rgba(251, 191, 36, 0.4) 100%);
+      }
+      66% {
+        background: linear-gradient(315deg, 
+          rgba(240, 147, 251, 0.4) 0%, 
+          rgba(96, 165, 250, 0.4) 100%);
+      }
+      100% {
+        background: linear-gradient(45deg, 
+          rgba(251, 191, 36, 0.4) 0%, 
+          rgba(52, 211, 153, 0.4) 100%);
+      }
+    }
+
+    header, section, article, footer {
+      position: relative;
+      z-index: 10;
+      max-width: 960px;
+      margin: 60px auto;
+      background: var(--bg-card);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 48px 56px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    header:hover, section:hover, article:hover {
+      box-shadow: var(--shadow-lg),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      transform: translateY(-4px);
+      border-color: rgba(102, 126, 234, 0.3);
+    }
+
+    h1, h2, h3, h4, h5 {
+      margin-top: 2.4em;
+      margin-bottom: 1em;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientFlow 8s ease infinite;
+      background-size: 200% 200%;
+    }
+
+    @keyframes gradientFlow {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      padding-bottom: 12px;
+      border-bottom: 2px solid transparent;
+      border-image: linear-gradient(90deg, #667eea, #f093fb, transparent) 1;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #667eea, #f093fb);
+      transition: width 0.5s ease;
+    }
+
+    h2:hover::after {
+      width: 60%;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      color: #667eea;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    h3::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 70%;
+      background: linear-gradient(180deg, #667eea, #f093fb);
+      border-radius: 2px;
+    }
+
+    h4 {
+      font-size: 1.15rem;
+      color: #764ba2;
+    }
+
+    p {
+      margin-bottom: 1.5em;
+      color: var(--text-secondary);
+      text-align: justify;
+    }
+
+    img {
+      display: block;
+      margin: 32px auto 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(102, 126, 234, 0.15);
+      max-width: 100%;
+      height: auto;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    img:hover {
+      transform: scale(1.02) translateY(-8px);
+      box-shadow: 0 20px 60px rgba(102, 126, 234, 0.25);
+    }
+
+    .caption {
+      text-align: center;
+      font-style: italic;
+      color: var(--text-muted);
+      font-size: 0.92em;
+      margin-top: -28px;
+      margin-bottom: 44px;
+      line-height: 1.6;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 32px 0 42px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(102, 126, 234, 0.08);
+      border: 1px solid rgba(102, 126, 234, 0.1);
+    }
+
+    th {
+      background: var(--table-header);
+      color: #1a1f36;
+      font-weight: 700;
+      padding: 16px 18px;
+      text-align: left;
+      font-size: 0.94em;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    td {
+      padding: 14px 18px;
+      border-bottom: 1px solid rgba(102, 126, 234, 0.08);
+      font-size: 0.96em;
+      color: var(--text-secondary);
+      transition: background 0.2s ease;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) {
+      background-color: rgba(248, 250, 252, 0.5);
+    }
+
+    tr:hover td {
+      background: rgba(102, 126, 234, 0.05);
+    }
+
+    ul, ol {
+      padding-left: 32px;
+      margin-bottom: 1.6em;
+      color: var(--text-secondary);
+    }
+
+    li {
+      margin-bottom: 0.65em;
+      position: relative;
+    }
+
+    ul li::marker {
+      color: #667eea;
+    }
+
+    code, pre {
+      font-family: var(--font-mono);
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(240, 147, 251, 0.05) 100%);
+      color: #764ba2;
+      border-radius: 8px;
+      padding: 3px 8px;
+      font-size: 0.92em;
+      border: 1px solid rgba(102, 126, 234, 0.1);
+    }
+
+    pre {
+      padding: 20px;
+      overflow-x: auto;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(240, 147, 251, 0.08) 100%);
+      border-left: 4px solid var(--accent-blue);
+      margin: 24px 0;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.08);
+    }
+
+    .note {
+      padding: 20px 24px;
+      background: var(--note-bg);
+      border-left: 5px solid var(--note-border);
+      border-radius: 0 12px 12px 0;
+      margin: 32px 0 40px;
+      font-size: 0.96em;
+      color: #5b21b6;
+      box-shadow: 0 4px 15px rgba(192, 132, 252, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .note::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+      pointer-events: none;
+    }
+
+    .metadata {
+      font-size: 1.05em;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .metadata-sub {
+      font-size: 0.94em;
+      color: var(--text-muted);
+    }
+
+    .section-divider {
+      height: 2px;
+      background: linear-gradient(to right, 
+        transparent, 
+        rgba(102, 126, 234, 0.3), 
+        rgba(240, 147, 251, 0.3),
+        transparent);
+      margin: 48px 0;
+    }
+
+    footer {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.05em;
+      padding: 32px 40px;
+      margin-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header, section, article, footer {
+        margin: 40px 20px;
+        padding: 32px 24px;
+      }
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.5rem; }
+      h3 { font-size: 1.2rem; }
+      p, li, td, th { font-size: 0.92em; }
+      img { margin: 24px auto 32px; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8rem; }
+      ul, ol { padding-left: 24px; }
+      table, th, td { display: block; }
+      th, td { padding: 10px 12px !important; }
+      tr {
+        margin-bottom: 16px;
+        display: block;
+        border: 1px solid rgba(102, 126, 234, 0.15);
+        border-radius: 12px;
+      }
+      tr:nth-child(even) { 
+        background: rgba(248, 250, 252, 0.8); 
+      }
+    }
+  </style>
+
+  <!-- Web Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <h1>Comprehensive Dossier: Methods and Protocols for Decorative Wall Design</h1>
+  <div class="metadata">
+    Prepared for practitioners in interior design, architectural detailing, and residential renovation
+  </div>
+  <div class="metadata-sub">
+    Document Reference: WD-2025-1017-EXT • Date: October 17, 2025 • Classification: Public Use – Professional Grade
+  </div>
+</header>
+
+<section>
+  <h2>Executive Summary</h2>
+  <p>
+    This document provides evidence-based protocols for decorative wall treatment using accessible, non-structural techniques. Content synthesizes industry standards from architectural finishing, decorative arts, and materials science. All methods emphasize surface-level interventions that preserve wall integrity while achieving professional-grade aesthetic outcomes.
+  </p>
+</section>
+
+<article>
+  <h2>1. Purpose and Scope</h2>
+  
+  <h3>1.1 Document Objectives</h3>
+  <p>This dossier serves three primary functions:</p>
+  <ul>
+    <li>Standardization of decorative wall treatment methodologies</li>
+    <li>Technical specification of materials and application protocols</li>
+    <li>Risk mitigation through systematic process documentation</li>
+  </ul>
+
+  <h3>1.2 Target Applications</h3>
+  <table>
+    <tr><th>Application Category</th><th>Typical Venues</th><th>Complexity Level</th></tr>
+    <tr><td>Residential accent walls</td><td>Living rooms, bedrooms, dining areas</td><td>Intermediate</td></tr>
+    <tr><td>Commercial feature installations</td><td>Retail spaces, restaurants, hotel lobbies</td><td>Advanced</td></tr>
+    <tr><td>Temporary exhibition spaces</td><td>Gallery walls, pop-up installations</td><td>Basic to Intermediate</td></tr>
+    <tr><td>Historic restoration simulation</td><td>Period-appropriate decorative finishes</td><td>Advanced</td></tr>
+    <tr><td>Therapeutic environments</td><td>Healthcare facilities, wellness centers</td><td>Intermediate</td></tr>
+  </table>
+
+  <h3>1.3 Excluded Methods</h3>
+  <p>This document deliberately excludes:</p>
+  <ul>
+    <li>Structural modifications requiring building permits</li>
+    <li>Wet plaster systems exceeding 10 mm thickness</li>
+    <li>Techniques requiring specialized HVAC or electrical integration</li>
+    <li>Professional-only applications (Venetian plaster, tadelakt, fresco)</li>
+    <li>Wallpaper and vinyl film installation</li>
+  </ul>
+</article>
+
+<article>
+  <h2>2. Pre-Implementation Assessment</h2>
+  
+  <h3>2.1 Wall Surface Evaluation Protocol</h3>
+  <p>Before technique selection, evaluate the substrate using this diagnostic framework:</p>
+  
+  <p><strong>Physical Assessment:</strong></p>
+  <ul>
+    <li><strong>Surface planarity</strong>: Measure deviation using 1.2-meter straightedge; acceptable variance ≤3 mm</li>
+    <li><strong>Porosity test</strong>: Apply water droplet; absorption >5 minutes indicates low porosity requiring primer</li>
+    <li><strong>Adhesion test</strong>: Apply 5 cm tape strip; if paint lifts on removal, surface requires preparation</li>
+    <li><strong>Moisture reading</strong>: Use pin-type moisture meter; readings >15% require remediation before proceeding</li>
+  </ul>
+
+  <p><strong>Material Compatibility Matrix:</strong></p>
+  <table>
+    <tr><th>Substrate Type</th><th>Suitable Techniques</th><th>Incompatible Methods</th><th>Required Preparation</th></tr>
+    <tr><td>Standard gypsum drywall</td><td>All methods listed</td><td>None</td><td>Prime if unpainted</td></tr>
+    <tr><td>Textured drywall (knockdown, orange peel)</td><td>Stamping, rag rolling, framed panels</td><td>Tape segmentation, fine stencils</td><td>Consider skim coat for precision work</td></tr>
+    <tr><td>Previously painted (latex)</td><td>All methods</td><td>None</td><td>Light sanding for adhesion</td></tr>
+    <tr><td>Previously painted (oil-based)</td><td>Hand-stamping, framed panels</td><td>Water-based glazing without primer</td><td>Apply bonding primer first</td></tr>
+    <tr><td>Concrete block</td><td>Texture rolling, heavy stenciling</td><td>Delicate tape patterns</td><td>Fill pores with block filler</td></tr>
+    <tr><td>Wood paneling</td><td>Framed panels, stamping</td><td>Compound-based stenciling</td><td>Prime with oil-based primer</td></tr>
+  </table>
+
+  <h3>2.2 Environmental Parameters</h3>
+  <p>Optimal execution conditions:</p>
+  <table>
+    <tr><th>Parameter</th><th>Acceptable Range</th><th>Ideal Range</th><th>Risk if Outside Range</th></tr>
+    <tr><td>Temperature</td><td>10–32°C</td><td>18–24°C</td><td>Extended cure times, cracking, poor adhesion</td></tr>
+    <tr><td>Relative humidity</td><td>30–70%</td><td>40–50%</td><td>Mold risk (high), excessive drying (low)</td></tr>
+    <tr><td>Air circulation</td><td>Natural or mechanical</td><td>Gentle mechanical</td><td>Skinning, dust adherence, uneven drying</td></tr>
+    <tr><td>UV exposure during cure</td><td>Indirect light only</td><td>Diffused natural light</td><td>Color shift, uneven curing</td></tr>
+  </table>
+</article>
+
+<article>
+  <h2>3. Comprehensive Technique Catalog</h2>
+  
+  <h3>3.1 Geometric Tape Segmentation (Enhanced)</h3>
+  <p><strong>Basic Protocol:</strong></p>
+  <ol>
+    <li><strong>Layout planning</strong>: Use laser level for horizontal/vertical alignment; mark intersections with low-visibility pencil</li>
+    <li><strong>Tape selection by application</strong>:
+      <ul>
+        <li>Standard painter's tape (14-day): General purpose, clean lines</li>
+        <li>Delicate surface tape (7-day): Fresh paint, textured surfaces</li>
+        <li>Sharp edge tape: Precision work requiring blade-sharp boundaries</li>
+      </ul>
+    </li>
+    <li><strong>Application technique</strong>: Apply tape at 45° angle, pressing firmly with plastic squeegee to prevent bleed</li>
+    <li><strong>Paint application</strong>: Use foam mini-roller for crisp edges; avoid brush work within 2 cm of tape lines</li>
+    <li><strong>Removal timing</strong>: Pull tape at 45° angle when paint is 80% dry (tacky but not wet)</li>
+  </ol>
+<p>
+	    <img src="https://assets-news.housing.com/news/wp-content/uploads/2023/03/24141314/Masking-tape-wall-paint-design-ideas-to-take-inspiration-from-04.png" alt="Geometric Paint Segmentation using painter's tape">
+  <div class="caption">Example: Geometric paint segmentation using tape boundaries for crisp, modern compositions</div>
+  <p>
+  <p><strong>Advanced Variations:</strong></p>
+  <table>
+    <tr><th>Technique</th><th>Procedure</th><th>Visual Effect</th></tr>
+    <tr><td>Layered masking</td><td>Apply paint, retape over dried layer, repeat</td><td>Multi-dimensional depth, overlapping shapes</td></tr>
+    <tr><td>Gradient banding</td><td>Apply progressively lighter/darker tones in adjacent segments</td><td>Ombré effect within geometric framework</td></tr>
+    <tr><td>Negative space emphasis</td><td>Tape perimeter of shapes, paint background, remove tape</td><td>Floating shapes on base color</td></tr>
+    <tr><td>Faux inlay</td><td>Apply metallic paint in thin tape-defined channels</td><td>Embedded metal accent lines</td></tr>
+  </table>
+
+  <h3>3.2 Roller-Applied Texture and Pattern Systems</h3>
+  <p><strong>Standard Texture Rollers:</strong></p>
+  <table>
+    <tr><th>Roller Type</th><th>Pattern Output</th><th>Paint Viscosity</th><th>Recommended Base</th></tr>
+    <tr><td>High-nap lamb's wool (25 mm)</td><td>Random stipple</td><td>Standard latex</td><td>Matte or eggshell</td></tr>
+    <tr><td>Closed-cell foam (embossed pattern)</td><td>Geometric repeat</td><td>Thinned 10% with water</td><td>Semi-gloss base for contrast</td></tr>
+    <tr><td>Open-weave fabric sleeve</td><td>Linen texture</td><td>Standard to thick</td><td>Satin finish</td></tr>
+    <tr><td>Rubber pattern roller</td><td>Precise motif repeat</td><td>Standard</td><td>Any finish</td></tr>
+    <tr><td>Textured paint roller (sandstone effect)</td><td>Aggregate appearance</td><td>Thick texture paint</td><td>Primer or base coat</td></tr>
+  </table>
+<p>
+    <img src="https://i.pinimg.com/474x/c8/c6/4a/c8c64a983970d2f95891b3d9764a663f.jpg" alt="Textured roller wall pattern">
+  <div class="caption">Patterned rubber roller for continuous, all-over motif repetition</div>
+  
+  <p><strong>Application Protocol for Pattern Precision:</strong></p>
+  <ol>
+    <li><strong>Baseline establishment</strong>: Mark horizontal reference line using laser level at comfortable working height</li>
+    <li><strong>Loading technique</strong>: Roll in paint tray until evenly saturated but not dripping (test saturation on cardboard)</li>
+    <li><strong>First pass</strong>: Begin at top left corner (right-handed) or top right (left-handed); maintain consistent pressure</li>
+    <li><strong>Pattern alignment</strong>: For geometric repeats, mark registration points every 60 cm using removable tape flags</li>
+    <li><strong>Edge handling</strong>: Use 10 cm foam brush to hand-apply pattern in corners and edges too tight for roller</li>
+    <li><strong>Quality control</strong>: Inspect at oblique angle under portable work light every 1.5 m² for missed areas</li>
+  </ol>
+
+  <p><strong>Custom Roller Creation:</strong></p>
+  <ul>
+    <li><strong>Carved foam method</strong>: Use high-density craft foam (5–10 mm thickness), carve with heated wire tool</li>
+    <li><strong>String wrap technique</strong>: Wrap textured string or cord around smooth roller in planned pattern, secure with hot glue</li>
+    <li><strong>Fabric application</strong>: Adhere textured fabric (burlap, lace) to roller with contact cement</li>
+    <li><strong>Relief block mounting</strong>: Attach carved rubber stamps or blocks to roller surface in repeating arrangement</li>
+  </ul>
+
+  <h3>3.3 Subtractive Glazing Techniques</h3>
+  <p><strong>Glaze Base Formulation:</strong></p>
+  <table>
+    <tr><th>Component</th><th>Standard Ratio</th><th>Function</th><th>Adjustment Notes</th></tr>
+    <tr><td>Glazing medium</td><td>4 parts</td><td>Translucency, extended open time</td><td>Increase for more transparency</td></tr>
+    <tr><td>Latex paint</td><td>1 part</td><td>Color, opacity</td><td>Use same sheen as base coat</td></tr>
+    <tr><td>Water</td><td>0.5–1 part</td><td>Flow control</td><td>Add incrementally to desired viscosity</td></tr>
+    <tr><td>Flow aid (optional)</td><td>2–3 drops per cup</td><td>Surface tension reduction</td><td>Prevents lap marks in large areas</td></tr>
+  </table>
+  <p>
+  	    <img src="https://i.ytimg.com/vi/XsKmX5o5b0U/hq720.jpg" alt="Wall glazing effect">
+  <div class="caption">Translucent glaze layered over base coat for luminous depth and complexity</div>
+
+  <p><strong>Rag Rolling Method:</strong></p>
+  <p><em>Material selection by effect:</em></p>
+  <ul>
+    <li><strong>Cotton cheesecloth</strong>: Fine, irregular texture with soft edges</li>
+    <li><strong>Natural sea sponge</strong>: Organic, coral-like patterns with high variation</li>
+    <li><strong>Plastic shopping bag</strong>: Sharp, angular creases; modern aesthetic</li>
+    <li><strong>Chamois leather</strong>: Smooth, cloud-like formations</li>
+    <li><strong>Canvas drop cloth</strong>: Bold, fabric weave impression</li>
+  </ul>
+
+  <img src="https://www.familyhandyman.com/wp-content/uploads/2017/06/FH98MAY_01344008-1200.jpg?fit=696,1024" alt="Sponge paint technique">
+  <div class="caption">Natural sea sponge application yields organic, coral-like texture</div>
+  
+  <p><em>Execution techniques:</em></p>
+  <ol>
+    <li><strong>Positive technique</strong>: Apply glaze with rag/sponge directly to base coat
+      <ul>
+        <li>Lighter final appearance than base</li>
+        <li>More controlled, predictable pattern</li>
+        <li>Ideal for subtle effects</li>
+      </ul>
+    </li>
+    <li><strong>Negative technique</strong>: Apply glaze with brush/roller, then remove with rag/sponge
+      <ul>
+        <li>Darker final appearance than base</li>
+        <li>More organic, varied pattern</li>
+        <li>Longer open time for large areas</li>
+      </ul>
+    </li>
+    <li><strong>Cross-hatching</strong>: Apply in one direction, allow to flash (5 minutes), apply perpendicular second layer
+      <ul>
+        <li>Creates woven or linen appearance</li>
+        <li>Requires careful timing to prevent lifting first layer</li>
+      </ul>
+    </li>
+  </ol>
+<p>
+	    <img src="https://i.pinimg.com/736x/ea/24/41/ea24413a2c4930c4ba6a4dfb35e8ef99.jpg" alt="Rag rolled paint wall">
+  <div class="caption">Rag rolling creates soft, fibrous depth through subtractive glazing</div> <p>
+  <p><strong>Dragging and Combing:</strong></p>
+  <table>
+    <tr><th>Tool</th><th>Pattern Characteristics</th><th>Best Applications</th></tr>
+    <tr><td>10 cm chip brush</td><td>Wide, ribbon-like strokes</td><td>Drapery effect, fabric simulation</td></tr>
+    <tr><td>Metal graining comb (wide teeth)</td><td>Bold, uniform lines</td><td>Rustic wood grain, linear patterns</td></tr>
+    <tr><td>Rubber graining comb (fine teeth)</td><td>Subtle, grass-like texture</td><td>Refined wood grain, vertical emphasis</td></tr>
+    <tr><td>Notched trowel</td><td>Geometric parallel grooves</td><td>Contemporary linear designs</td></tr>
+  </table>
+
+  <h3>3.4 Three-Dimensional Relief Applications (Expanded)</h3>
+  <p><strong>Material Science and Selection:</strong></p>
+  <p><em>Joint compound variations:</em></p>
+  <ul>
+    <li><strong>All-purpose</strong>: General use; slight shrinkage on thick applications</li>
+    <li><strong>Topping compound</strong>: Smooth finish; minimal shrinkage; ideal for final coat</li>
+    <li><strong>Lightweight</strong>: Reduced weight; easier sanding; lower durability</li>
+    <li><strong>Setting compound (20/45/90 minute)</strong>: Chemical set; no shrinkage; not sandable after cure</li>
+    <li><strong>Flex compound</strong>: Acrylic-modified; crack-resistant; premium cost</li>
+  </ul>
+
+  <p><strong>Additive Enhancements:</strong></p>
+  <table>
+    <tr><th>Additive</th><th>Ratio</th><th>Purpose</th><th>Trade-offs</th></tr>
+    <tr><td>PVA glue</td><td>10–15% by volume</td><td>Increased adhesion, flexibility</td><td>Extended drying time</td></tr>
+    <tr><td>Acrylic medium (matte)</td><td>20–30% by volume</td><td>Water resistance, durability</td><td>Reduced workability</td></tr>
+    <tr><td>Fine silica sand</td><td>5–10% by volume</td><td>Tooth for painting, sparkle</td><td>Abrasive to tools</td></tr>
+    <tr><td>Cellulose fiber</td><td>2–5% by volume</td><td>Crack resistance, structural integrity</td><td>Visible texture</td></tr>
+    <tr><td>Pigment/paint</td><td>Up to 5% by volume</td><td>Integrated color</td><td>May weaken if excessive</td></tr>
+  </table>
+
+  <p><strong>Stencil Material Engineering:</strong></p>
+  <p><em>Optimal stencil specifications:</em></p>
+  <ul>
+    <li><strong>Material</strong>: 0.5–1.0 mm mylar or acetate (polyester film)</li>
+    <li><strong>Bridge design</strong>: Minimum 3 mm width for structural integrity</li>
+    <li><strong>Detail resolution</strong>: Minimum feature size 5 mm for hand-cut, 2 mm for laser-cut</li>
+    <li><strong>Reusability</strong>: Wash immediately after each use with warm water and soft brush</li>
+  </ul>
+
+  <p><em>Stencil creation methods:</em></p>
+  <ol>
+    <li><strong>Computer-aided design (CAD) to laser cutting</strong>:
+      <ul>
+        <li>Design in vector software (Adobe Illustrator, Inkscape)</li>
+        <li>Export as vector file (.DXF, .SVG)</li>
+        <li>Commission laser cutting service</li>
+        <li>Cost: ₹500–2,000 per stencil depending on complexity</li>
+      </ul>
+    </li>
+    <li><strong>Hand-cutting with precision blade</strong>:
+      <ul>
+        <li>Print pattern on paper; transfer to mylar using graphite paper</li>
+        <li>Cut on self-healing mat using fresh #11 blade</li>
+        <li>Minimum skill development: 5–10 practice pieces</li>
+      </ul>
+    </li>
+    <li><strong>Vinyl cutter method</strong>:
+      <ul>
+        <li>Use craft vinyl cutter (e.g., Cricut, Silhouette)</li>
+        <li>Apply cut vinyl to mylar backing</li>
+        <li>Use for single or few applications before adhesive weakens</li>
+      </ul>
+    </li>
+  </ol>
+<p>
+	    <img src="https://simpolo-web.s3.ap-south-1.amazonaws.com/uploads/media/blog/POPWallPanelsinRusticorVintageStyles.jpg" alt="3D Wall stencil/embossed panel">
+  <div class="caption">Tactile 3D relief created with joint compound through precision stencils</div>
+  <p>
+  <p><strong>Advanced Stenciling Protocols:</strong></p>
+  <p><em>Multi-layer relief construction:</em></p>
+  <ul>
+    <li><strong>Layer 1 (Base relief)</strong>: Apply compound at 2 mm through stencil; cure 24 hours</li>
+    <li><strong>Layer 2 (Mid-tone)</strong>: Realign stencil over base; apply compound to selected elements at 1.5 mm</li>
+    <li><strong>Layer 3 (Highlight)</strong>: Hand-apply small amounts to peaks using palette knife</li>
+    <li><strong>Result</strong>: 3D depth ranging 2–4.5 mm with internal variation</li>
+  </ul>
+
+  <p><em>Compound application tools and techniques:</em></p>
+  <table>
+    <tr><th>Tool Category</th><th>Specific Options</th><th>Application Method</th><th>Resulting Texture</th></tr>
+    <tr><td><strong>Flexible trowels</strong></td><td>10 cm plastic putty knife, Japanese trowel</td><td>Smooth spreading at 30° angle</td><td>Flat, uniform surface</td></tr>
+    <tr><td><strong>Stiff trowels</strong></td><td>8 cm stainless steel, offset trowel</td><td>Firm pressure, 45° angle</td><td>Crisp edges, slight compression</td></tr>
+    <tr><td><strong>Rounded tools</strong></td><td>Flexible rubber rib, spoon back</td><td>Sweeping arcs and curves</td><td>Rounded, billowing forms</td></tr>
+    <tr><td><strong>Piping application</strong></td><td>Frosting bag with round tip (8–12 mm)</td><td>Squeeze with steady pressure</td><td>Beaded, rope-like lines</td></tr>
+    <tr><td><strong>Stippling tools</strong></td><td>Stiff bristle brush, foam pouncers</td><td>Vertical dabbing motion</td><td>Rough, pitted surface</td></tr>
+  </table>
+
+  <p><em>Embossing and texture additions:</em></p>
+  <p><strong>Pre-removal modifications</strong> (work within first 10 minutes):</p>
+  <ul>
+    <li><strong>Directional combing</strong>: Drag fine-tooth comb through wet compound to create linear texture</li>
+    <li><strong>Mesh impression</strong>: Press fiberglass window screen firmly into compound; remove before stencil lift</li>
+    <li><strong>Stamp overlay</strong>: Press small decorative stamps into compound surface for added detail</li>
+    <li><strong>Feather blending</strong>: Use damp brush to soften hard edges where desired</li>
+    <li><strong>Incised detail</strong>: Use stylus or nail to draw fine lines through compound</li>
+  </ul>
+
+  <p><strong>Post-cure surface treatments</strong>:</p>
+  <ul>
+    <li><strong>Distressing</strong>: Sand edges and high points with 220-grit paper for aged appearance</li>
+    <li><strong>Craquelure</strong>: Apply crackle medium over sealed relief; topcoat creates fissure pattern</li>
+    <li><strong>Metallic leafing</strong>: Apply adhesive size; press composition leaf onto relief peaks</li>
+    <li><strong>Patination</strong>: Apply verdigris or rust solutions for aged metal appearance</li>
+  </ul>
+
+  <h3>3.5 Framed Panel Systems</h3>
+  <p><strong>Molding Selection Guide:</strong></p>
+  <table>
+    <tr><th>Profile Type</th><th>Dimensions (typical)</th><th>Style Association</th><th>Installation Method</th></tr>
+    <tr><td>Colonial casing</td><td>60–80 mm face width</td><td>Traditional, Georgian</td><td>Miter corners, nail/adhesive</td></tr>
+    <tr><td>Picture frame molding</td><td>30–50 mm face width</td><td>Victorian, eclectic</td><td>Miter corners, adhesive only (lightweight)</td></tr>
+    <tr><td>Chair rail</td><td>50–75 mm width</td><td>Classic, formal</td><td>Horizontal installation, bisects wall</td></tr>
+    <tr><td>Crown molding (lightweight)</td><td>75–125 mm face</td><td>Ceiling detail, traditional</td><td>Compound angles, construction adhesive</td></tr>
+    <tr><td>Flat stock with edge detail</td><td>25–40 mm width</td><td>Modern, minimalist</td><td>Butt joints acceptable, adhesive</td></tr>
+  </table>
+  
+    <img src="https://i.pinimg.com/474x/87/30/b1/8730b1f8c59b0392900e6689166de048.jpg" alt="Fabric panel wall framing">
+  <div class="caption">Fabric infill within architectural molding for soft, curated accent</div>
+  <p>
+  <img src="https://cdn.shopify.com/s/files/1/0115/3266/4932/files/Pineapple_Botanical_Customer_Pic_2_Edited_600x600.jpg?v=1607251634" alt="Wallpaper framed wall panel">
+  <div class="caption">Wallpapered panel as a focal point within a neutral wall field</div>
+
+  <p><strong>Panel Layout Systems:</strong></p>
+  <p><em>Grid-based layouts:</em></p>
+  <ol>
+    <li><strong>Classic wainscoting</strong>:
+      <ul>
+        <li>Lower third of wall height</li>
+        <li>Rectangular panels 40–60 cm width</li>
+        <li>Chair rail cap and baseboard anchor</li>
+        <li>Infill: Beadboard, contrasting paint, wallpaper</li>
+      </ul>
+    </li>
+    <li><strong>Full-wall grid</strong>:
+      <ul>
+        <li>3×3 or 4×4 grid filling entire wall</li>
+        <li>Equal-sized rectangles or squares</li>
+        <li>Modern aesthetic when painted monochrome</li>
+        <li>Infill options: Contrasting sheen, texture, material</li>
+      </ul>
+    </li>
+    <li><strong>Accent panel feature</strong>:
+      <ul>
+        <li>Single large rectangle (1.2×2 m typical)</li>
+        <li>Centered on wall or offset to golden ratio point</li>
+        <li>Deep frame (50+ mm) for dramatic shadow line</li>
+        <li>Infill: Bold color, wallpaper, fabric, textured compound</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p><strong>Installation Protocol:</strong></p>
+  <ol>
+    <li><strong>Layout</strong>: Mark panel perimeters using laser level and chalk line</li>
+    <li><strong>Cutting</strong>: Miter corners at 45° using powered miter saw or miter box</li>
+    <li><strong>Dry fit</strong>: Assemble all pieces without adhesive to verify fit</li>
+    <li><strong>Adhesive application</strong>: Apply construction adhesive in zigzag pattern on molding back</li>
+    <li><strong>Positioning</strong>: Press firmly to wall; use temporary brads if needed for support during cure</li>
+    <li><strong>Gap filling</strong>: Fill nail holes and gaps with painter's caulk; smooth with wet finger</li>
+    <li><strong>Finishing</strong>: Prime and paint when caulk fully cured (24 hours minimum)</li>
+  </ol>
+
+  <h3>3.6 Hand-Stamping Systems (Expanded)</h3>
+  <p><strong>Stamp Material Options:</strong></p>
+  <table>
+    <tr><th>Material</th><th>Carving Difficulty</th><th>Detail Capability</th><th>Durability</th><th>Cost</th></tr>
+    <tr><td>Craft foam sheets (3–5 mm)</td><td>Very easy</td><td>Low (chunky designs)</td><td>50–100 uses</td><td>Very low</td></tr>
+    <tr><td>High-density foam blocks</td><td>Easy</td><td>Medium (moderate detail)</td><td>200–500 uses</td><td>Low</td></tr>
+    <tr><td>Potato/vegetable</td><td>Very easy</td><td>Low to medium</td><td>Single use</td><td>Very low</td></tr>
+    <tr><td>Carving rubber blocks</td><td>Moderate</td><td>High (fine detail possible)</td><td>1,000+ uses</td><td>Moderate</td></tr>
+    <tr><td>Carved wood blocks</td><td>Difficult</td><td>High</td><td>5,000+ uses</td><td>Moderate to high</td></tr>
+    <tr><td>Found objects (cork, sponge)</td><td>None (as-is)</td><td>Variable</td><td>Variable</td><td>Very low</td></tr>
+  </table>
+  <p>
+    <img src="https://ey2msiqxj7z.exactdn.com/wp-content/uploads/2019/12/13221001/04_wall_stamp.jpg?strip=all&lossy=1&ssl=1" alt="DIY wall stamping">
+  <div class="caption">Custom foam or carved rubber stamps for repeatable, artisanal motifs</div>
+  <p><strong>Stamp Design Principles:</strong></p>
+  <ul>
+    <li><strong>Negative space ratio</strong>: Minimum 30% negative space for paint release and cleaning</li>
+    <li><strong>Detail minimum</strong>: 3 mm minimum line width for foam; 1 mm for rubber/wood</li>
+    <li><strong>Aspect ratio</strong>: Maximum 3:1 ratio (length to width) for even pressure distribution</li>
+    <li><strong>Bridge integrity</strong>: Connect all elements with minimum 2 mm bridges</li>
+  </ul>
+
+  <p><strong>Application Techniques:</strong></p>
+  <p><em>Standard stamping protocol:</em></p>
+  <ol>
+    <li><strong>Paint loading</strong>: Pour paint into shallow tray; press stamp into paint, then onto paper towel to remove excess</li>
+    <li><strong>Test impression</strong>: Make 3–5 test stamps on scrap to establish proper paint load and pressure</li>
+    <li><strong>Wall application</strong>: Press stamp firmly and evenly; hold 2–3 seconds; lift straight away</li>
+    <li><strong>Pattern development</strong>: Work in rows or random placement; maintain consistent orientation or rotate for variation</li>
+    <li><strong>Reloading</strong>: Reload every 2–3 impressions for consistent opacity</li>
+  </ol>
+
+  <p><em>Advanced stamping variations:</em></p>
+  <p><strong>Multi-color stamping:</strong></p>
+  <ul>
+    <li><strong>Method A</strong>: Apply different colors to different sections of single stamp using brush</li>
+    <li><strong>Method B</strong>: Use separate stamps for each color element; allow to dry between colors</li>
+    <li><strong>Method C</strong>: Apply base color overall; overstamp select areas with accent color</li>
+  </ul>
+
+  <p><strong>Ombré stamping:</strong></p>
+  <ul>
+    <li>Load stamp with gradient from light to dark</li>
+    <li>Progressively add darker color to stamp as you work across wall</li>
+    <li>Creates graduated color transition</li>
+  </ul>
+
+  <p><strong>Double-impression technique:</strong></p>
+  <ul>
+    <li>Apply first impression</li>
+    <li>Immediately reapply stamp slightly offset (5–10 mm)</li>
+    <li>Creates shadow or 3D effect</li>
+  </ul>
+</article>
+
+<article>
+  <h2>4. Paint and Finish Specifications</h2>
+  
+  <h3>4.1 Paint Chemistry and Selection</h3>
+  <p><strong>Base Coat Paint Types:</strong></p>
+  <table>
+    <tr><th>Paint Type</th><th>Composition</th><th>Sheen Options</th><th>Best Applications</th></tr>
+    <tr><td>Acrylic latex</td><td>Water-based synthetic polymer</td><td>Flat to semi-gloss</td><td>General purpose, all techniques</td></tr>
+    <tr><td>Alkyd (oil-modified)</td><td>Oil-modified water-based</td><td>Eggshell to semi-gloss</td><td>High-durability needs</td></tr>
+    <tr><td>100% acrylic</td><td>Pure acrylic binder, no vinyl</td><td>Flat to satin</td><td>Premium finish, minimal yellowing</td></tr>
+    <tr><td>Vinyl acrylic</td><td>Vinyl-acrylic copolymer</td><td>Flat to eggshell</td><td>Economy option, sufficient for most uses</td></tr>
+  </table>
+
+  <p><strong>Sheen Selection Strategy:</strong></p>
+  <table>
+    <tr><th>Sheen Level</th><th>Light Reflectance Value</th><th>Advantages</th><th>Disadvantages</th><th>Recommended Techniques</th></tr>
+    <tr><td>Flat/Matte</td><td>0–5%</td><td>Hides imperfections, rich color depth</td><td>Shows scuffs, not washable</td><td>Stenciling, stamping (top coat)</td></tr>
+    <tr><td>Eggshell</td><td>10–25%</td><td>Subtle luster, light washability</td><td>Still shows some imperfections</td><td>Base coat for most techniques</td></tr>
+    <tr><td>Satin</td><td>25–35%</td><td>Durable, washable, slight sheen</td><td>Highlights imperfections</td><td>Base for glazing, geometric tape work</td></tr>
+    <tr><td>Semi-gloss</td><td>35–70%</td><td>Highly durable, scrub-resistant</td><td>Magnifies surface flaws</td><td>Trim, molding, high-traffic accents</td></tr>
+  </table>
+
+  <h3>4.2 Specialty Finishes and Top Coats</h3>
+  <p><strong>Metallic Finishes:</strong></p>
+  <p><em>Application methods:</em></p>
+  <ul>
+    <li><strong>Metallic paint</strong>: Pre-mixed with metallic particles; apply with foam brush for streak-free finish</li>
+    <li><strong>Mica powder</strong>: Mix powder into clear medium; apply over base color for iridescent effect</li>
+    <li><strong>Metallic glaze</strong>: Mix metallic paint with glazing liquid (1:2 ratio); apply and wipe back</li>
+    <li><strong>Metallic wax</strong>: Rub paste wax onto relief high points with soft cloth; buff to sheen</li>
+  </ul>
+
+  <p><strong>Faux Finish Top Treatments:</strong></p>
+  <table>
+    <tr><th>Technique</th><th>Materials</th><th>Procedure</th><th>Final Appearance</th></tr>
+    <tr><td>Aging/antiquing</td><td>Raw umber glaze</td><td>Apply to surface; wipe peaks, leave valleys</td><td>Time-worn, depth</td></tr>
+    <tr><td>Color washing</td><td>Heavily thinned paint (1:4)</td><td>Brush on in cross-hatch; softly blend</td><td>Subtle color variation, textural</td></tr>
+    <tr><td>Pearlescent overlay</td><td>Pearl medium + pigment</td><td>Thin application with soft brush</td><td>Luminous, shifting color</td></tr>
+    <tr><td>Dry brushing</td><td>Unthinned paint, nearly dry brush</td><td>Lightly drag over texture</td><td>Highlighted texture peaks</td></tr>
+  </table>
+
+  <p><strong>Protective Sealers:</strong></p>
+  <table>
+    <tr><th>Sealer Type</th><th>VOC Level</th><th>Durability</th><th>Application Method</th><th>Dry Time</th><th>Sheen Options</th></tr>
+    <tr><td>Water-based polyurethane</td><td>Low</td><td>High</td><td>Brush or spray</td><td>2–4 hours</td><td>Matte, satin, gloss</td></tr>
+    <tr><td>Acrylic sealer</td><td>Very low</td><td>Medium</td><td>Brush or spray</td><td>1–2 hours</td><td>Matte, satin</td></tr>
+    <tr><td>Wax (paste)</td><td>Zero</td><td>Medium</td><td>Cloth application, buffing</td><td>24 hours</td><td>Soft luster</td></tr>
+    <tr><td>Clear shellac</td><td>Moderate to high</td><td>Low to medium</td><td>Brush</td><td>30 minutes</td><td>Satin, gloss</td></tr>
+  </table>
+
+  <p><em>Selection criteria:</em></p>
+  <ul>
+    <li><strong>High-traffic walls</strong>: Water-based polyurethane (satin)</li>
+    <li><strong>Decorative-only walls</strong>: Acrylic sealer (matte) or no sealer</li>
+    <li><strong>Relief work requiring protection</strong>: Two thin coats acrylic sealer</li>
+    <li><strong>Antique finish preservation</strong>: Clear paste wax</li>
+  </ul>
+</article>
+
+<article>
+  <h2>5. Color Theory Application</h2>
+  
+  <h3>5.1 Color Selection Framework</h3>
+  <p><strong>Monochromatic schemes</strong> (single hue variations):</p>
+  <ul>
+    <li>Base wall: 60% value of chosen hue</li>
+    <li>Technique application: 30% and 90% values</li>
+    <li>Creates cohesive, subtle depth</li>
+    <li>Best for: Rag rolling, texture rolling, single-stencil relief</li>
+  </ul>
+
+  <p><strong>Analogous schemes</strong> (adjacent hues):</p>
+  <ul>
+    <li>Select 3 colors within 90° on color wheel</li>
+    <li>Use one as dominant (60%), one as secondary (30%), one as accent (10%)</li>
+    <li>Creates harmony with visual interest</li>
+    <li>Best for: Multi-layer stenciling, stamped patterns, geometric tape work</li>
+  </ul>
+
+  <p><strong>Complementary contrast</strong>:</p>
+  <ul>
+    <li>Opposite colors on wheel (blue/orange, red/green)</li>
+    <li>Use one as base, other as technique color in desaturated form</li>
+    <li>Provides maximum visual pop</li>
+    <li>Best for: Accent panels, bold geometric designs, statement walls</li>
+  </ul>
+
+  <p><strong>Neutral + accent</strong>:</p>
+  <ul>
+    <li>Neutral base (grey, beige, greige)</li>
+    <li>Single bold accent color for technique</li>
+    <li>Most versatile and widely appealing</li>
+    <li>Best for: All techniques, especially resale consideration</li>
+  </ul>
+
+  <h3>5.2 Color Psychology in Application</h3>
+  <table>
+    <tr><th>Color Family</th><th>Psychological Effect</th><th>Recommended Rooms</th><th>Technique Suggestions</th></tr>
+    <tr><td>Cool blues/greens</td><td>Calming, spacious feeling</td><td>Bedrooms, bathrooms</td><td>Soft rag rolling, organic stamps</td></tr>
+    <tr><td>Warm reds/oranges</td><td>Energizing, appetizing</td><td>Dining rooms, kitchens</td><td>Bold geometric patterns, structured designs</td></tr>
+    <tr><td>Neutrals (greys/beiges)</td><td>Sophisticated, stable</td><td>Living rooms, offices</td><td>Textural techniques, subtle relief work</td></tr>
+    <tr><td>Purples</td><td>Creative, luxurious</td><td>Studios, bedrooms</td><td>Metallic accents, elegant stencils</td></tr>
+    <tr><td>Yellows</td><td>Cheerful, optimistic</td><td>Kitchens, children's rooms</td><td>Playful stamps, bright patterns</td></tr>
+  </table>
+</article>
+
+<article>
+  <h2>6. Troubleshooting and Quality Control</h2>
+  
+  <h3>6.1 Common Issues and Remediation</h3>
+  <p><strong>Paint bleed under tape:</strong></p>
+  <p><em>Causes:</em></p>
+  <ul>
+    <li>Inadequate tape adhesion</li>
+    <li>Paint too thin</li>
+    <li>Excessive paint application</li>
+  </ul>
+  <p><em>Prevention:</em></p>
+  <ul>
+    <li>Seal tape edges with base coat color first</li>
+    <li>Use proper paint viscosity</li>
+    <li>Apply thin coats with foam roller</li>
+  </ul>
+  <p><em>Remedy:</em></p>
+  <ul>
+    <li>Minor bleed: Touch up with artist brush when dry</li>
+    <li>Major bleed: Sand smooth and repaint section</li>
+  </ul>
+
+  <p><strong>Compound relief cracking:</strong></p>
+  <p><em>Causes:</em></p>
+  <ul>
+    <li>Application too thick (>5 mm)</li>
+    <li>Rapid drying conditions</li>
+    <li>Inadequate substrate preparation</li>
+  </ul>
+  <p><em>Prevention:</em></p>
+  <ul>
+    <li>Build thickness in multiple layers</li>
+    <li>Control environmental conditions</li>
+    <li>Prime substrate for better adhesion</li>
+  </ul>
+  <p><em>Remedy:</em></p>
+  <ul>
+    <li>Hairline cracks: Fill with thinned compound, smooth with damp sponge</li>
+    <li>Structural cracks: Remove and reapply</li>
+  </ul>
+
+  <p><strong>Uneven pattern application:</strong></p>
+  <p><em>Causes:</em></p>
+  <ul>
+    <li>Inconsistent pressure</li>
+    <li>Uneven paint loading</li>
+    <li>Improper tool condition</li>
+  </ul>
+  <p><em>Prevention:</em></p>
+  <ul>
+    <li>Practice on sample board first</li>
+    <li>Establish loading routine</li>
+    <li>Clean tools frequently during use</li>
+  </ul>
+  <p><em>Remedy:</em></p>
+  <ul>
+    <li>Touch up thin areas with brush or small roller</li>
+    <li>If severe, apply second overall coat when first is dry</li>
+  </ul>
+
+  <p><strong>Glaze lap marks:</strong></p>
+  <p><em>Causes:</em></p>
+  <ul>
+    <li>Working too slowly; glaze drying before blending</li>
+    <li>Improper glaze formulation (too thick)</li>
+    <li>Insufficient open time</li>
+  </ul>
+  <p><em>Prevention:</em></p>
+  <ul>
+    <li>Work in manageable sections (1 m² maximum)</li>
+    <li>Add more glazing medium to extend open time</li>
+    <li>Use flow aid additive</li>
+    <li>Work with partner for large areas</li>
+  </ul>
+  <p><em>Remedy:</em></p>
+  <ul>
+    <li>If still wet: Reapply glaze and rework</li>
+    <li>If dry: Apply additional glaze coat over entire section</li>
+  </ul>
+
+  <h3>6.2 Quality Control Checkpoints</h3>
+  <p><strong>During application:</strong></p>
+  <ul>
+    <li>Inspect every 1 m² under oblique lighting</li>
+    <li>Check pattern alignment every 3 impressions (stamps/stencils)</li>
+    <li>Verify tape adhesion before painting</li>
+    <li>Test glaze consistency on sample every 30 minutes</li>
+  </ul>
+
+  <p><strong>Post-application:</strong></p>
+  <ul>
+    <li>View completed work from multiple angles</li>
+    <li>Photograph in various lighting conditions</li>
+    <li>Check for holidays (missed spots)</li>
+    <li>Assess overall balance and composition</li>
+  </ul>
+</article>
+
+<article>
+  <h2>7. Safety Protocols and Material Handling</h2>
+  
+  <h3>7.1 Personal Protective Equipment</h3>
+  <table>
+    <tr><th>Activity</th><th>Required PPE</th><th>Optional PPE</th></tr>
+    <tr><td>Sanding dried compound</td><td>N95 respirator, safety glasses</td><td>Dust collection attachment</td></tr>
+    <tr><td>Paint application</td><td>None for water-based</td><td>Nitrile gloves for sensitive skin</td></tr>
+    <tr><td>Heavy glazing/finishing</td><td>Nitrile gloves</td><td>Apron or coveralls</td></tr>
+    <tr><td>Cutting molding</td><td>Safety glasses, hearing protection</td><td>Dust mask</td></tr>
+  </table>
+
+  <h3>7.2 Ventilation Requirements</h3>
+  <table>
+    <tr><th>Material Category</th><th>Minimum Ventilation</th><th>Duration</th></tr>
+    <tr><td>Water-based paints and compounds</td><td>Natural cross-ventilation</td><td>During application only</td></tr>
+    <tr><td>Acrylic mediums and glazes</td><td>Open windows or exhaust fan</td><td>During application + 2 hours</td></tr>
+    <tr><td>Oil-based primers/sealers</td><td>Mechanical ventilation (fan)</td><td>During application + 24 hours</td></tr>
+    <tr><td>Spray applications</td><td>Cross-ventilation + exhaust</td><td>During application + 4 hours</td></tr>
+  </table>
+
+  <h3>7.3 Material Storage and Disposal</h3>
+  <p><strong>Storage:</strong></p>
+  <ul>
+    <li>Latex paints: Store at 10–27°C; freeze-proof storage not required but avoid freezing</li>
+    <li>Joint compound: Seal tightly; add 1 cm water layer on top before sealing to prevent drying</li>
+    <li>Mediums and glazes: Store in original containers; shelf life 2–5 years unopened</li>
+    <li>Mixed materials: Use within 24 hours or discard</li>
+  </ul>
+
+  <p><strong>Disposal:</strong></p>
+  <ul>
+    <li>Latex paint: Allow to dry completely in can; dispose with household trash (check local regulations)</li>
+    <li>Water: Paint water can be poured down drain if fully mixed (no separation of paint solids)</li>
+    <li>Solid waste: Dried compound, tape, rollers—dispose with household trash</li>
+    <li>Containers: Recycle when empty and dry</li>
+  </ul>
+</article>
+
+<article>
+  <h2>8. Cost Analysis and Planning</h2>
+  
+  <h3>8.1 Material Cost Estimates (Indian Market, 2025)</h3>
+  <table>
+    <tr><th>Material Category</th><th>Coverage Rate</th><th>Cost per Unit</th><th>Cost per m²</th></tr>
+    <tr><td>Base coat paint (premium)</td><td>12–14 m²/L</td><td>₹800–1,200/L</td><td>₹60–100</td></tr>
+    <tr><td>Joint compound (all-purpose)</td><td>1.5 m²/L at 2 mm</td><td>₹400–600/5 kg</td><td>₹50–80</td></tr>
+    <tr><td>Glazing medium</td><td>10–15 m²/L (1:4 mix)</td><td>₹600–900/L</td><td>₹40–90</td></tr>
+    <tr><td>Painter's tape (premium)</td><td>50 m per roll</td><td>₹300–500/roll</td><td>₹20–40</td></tr>
+    <tr><td>Specialty rollers</td><td>N/A</td><td>₹200–800 each</td><td>₹15–60 (amortized)</td></tr>
+  </table>
+
+  <p><strong>Total Cost Ranges per Technique (10 m² wall):</strong></p>
+  <ul>
+    <li>Geometric tape work: ₹1,200–2,000</li>
+    <li>Roller texture: ₹900–1,500</li>
+    <li>Rag rolling/glazing: ₹1,500–2,500</li>
+    <li>Stencil relief: ₹1,800–3,500</li>
+    <li>Framed panels: ₹2,500–5,000</li>
+    <li>Hand stamping: ₹800–1,500</li>
+  </ul>
+
+  <h3>8.2 Time Allocation</h3>
+  <table>
+    <tr><th>Phase</th><th>Geometric Tape</th><th>Roller Texture</th><th>Rag Rolling</th><th>Stencil Relief</th><th>Framed Panels</th></tr>
+    <tr><td>Planning and layout</td><td>1–2 hours</td><td>0.5–1 hour</td><td>0.5 hour</td><td>2–3 hours</td><td>3–4 hours</td></tr>
+    <tr><td>Base coat (if needed)</td><td>2 hours + dry time</td><td>2 hours + dry time</td><td>2 hours + dry time</td><td>2 hours + dry time</td><td>2 hours + dry time</td></tr>
+    <tr><td>Technique execution (10 m²)</td><td>4–6 hours</td><td>2–3 hours</td><td>3–5 hours</td><td>6–10 hours</td><td>6–8 hours</td></tr>
+    <tr><td>Finishing/sealing</td><td>1–2 hours</td><td>1 hour</td><td>1–2 hours</td><td>2–3 hours</td><td>2–4 hours</td></tr>
+    <tr><td><strong>Total active time</strong></td><td><strong>10–14 hours</strong></td><td><strong>6–8 hours</strong></td><td><strong>8–11 hours</strong></td><td><strong>14–20 hours</strong></td><td><strong>15–20 hours</strong></td></tr>
+    <tr><td><strong>Total elapsed time (with cure)</strong></td><td><strong>2–3 days</strong></td><td><strong>1–2 days</strong></td><td><strong>1–2 days</strong></td><td><strong>3–5 days</strong></td><td><strong>3–4 days</strong></td></tr>
+  </table>
+</article>
+
+<article>
+  <h2>9. Maintenance and Longevity</h2>
+  
+  <h3>9.1 Cleaning Protocols by Technique</h3>
+  <table>
+    <tr><th>Technique</th><th>Routine Cleaning</th><th>Deep Cleaning</th><th>Frequency</th></tr>
+    <tr><td>Painted geometric/glazed</td><td>Microfiber dusting</td><td>Damp cloth with mild soap</td><td>Weekly / Monthly</td></tr>
+    <tr><td>Texture rolled</td><td>Soft-bristle vacuum attachment</td><td>Spot clean only</td><td>Biweekly / As needed</td></tr>
+    <tr><td>Stencil relief (unsealed)</td><td>Soft brush dusting</td><td>None (will damage)</td><td>Weekly</td></tr>
+    <tr><td>Stencil relief (sealed)</td><td>Microfiber cloth</td><td>Damp cloth</td><td>Weekly / Monthly</td></tr>
+    <tr><td>Framed panels</td><td>Dust with cloth</td><td>Wood cleaner on molding</td><td>Weekly / Quarterly</td></tr>
+  </table>
+
+  <h3>9.2 Expected Lifespan</h3>
+  <p><strong>Factors affecting durability:</strong></p>
+  <ul>
+    <li>Environmental exposure (humidity, UV, temperature fluctuation)</li>
+    <li>Traffic level and impact exposure</li>
+    <li>Quality of materials and application technique</li>
+    <li>Presence and type of protective sealer</li>
+  </ul>
+
+  <p><strong>Lifespan estimates under normal conditions:</strong></p>
+  <table>
+    <tr><th>Technique</th><th>Without Sealer</th><th>With Acrylic Sealer</th><th>With Polyurethane</th></tr>
+    <tr><td>Painted techniques (tape, glaze, roller)</td><td>5–10 years</td><td>8–12 years</td><td>10–15 years</td></tr>
+    <tr><td>Relief stenciling (compound)</td><td>3–7 years</td><td>7–12 years</td><td>10–15 years</td></tr>
+    <tr><td>Framed panels (painted)</td><td>10–20 years</td><td>15–25 years</td><td>20–30 years</td></tr>
+    <tr><td>Hand stamping</td><td>5–10 years</td><td>8–12 years</td><td>10–15 years</td></tr>
+  </table>
+
+  <p><strong>Degradation indicators:</strong></p>
+  <ul>
+    <li>Fading or yellowing of painted surfaces</li>
+    <li>Cracking or flaking of relief elements</li>
+    <li>Loosening of framed molding</li>
+    <li>Loss of texture definition</li>
+  </ul>
+
+  <h3>9.3 Repair and Touch-Up</h3>
+  <p><strong>Minor repairs:</strong></p>
+  <ul>
+    <li>Chipped paint: Sand lightly, touch up with original paint</li>
+    <li>Small relief damage: Fill with compound, sand smooth, repaint</li>
+    <li>Loose molding: Reglue with construction adhesive, recaulk</li>
+  </ul>
+
+  <p><strong>Major repairs:</strong></p>
+  <ul>
+    <li>Extensive fading: Repaint entire wall</li>
+    <li>Relief failure: Remove damaged sections, reapply</li>
+    <li>Molding damage: Replace damaged pieces</li>
+  </ul>
+</article>
+
+<article>
+  <h2>10. Advanced Design Integration</h2>
+  
+  <h3>10.1 Combining Multiple Techniques</h3>
+  <p><strong>Layering strategies:</strong></p>
+  <ol>
+    <li><strong>Base texture + accent relief</strong>:
+      <ul>
+        <li>Apply roller texture across entire wall</li>
+        <li>Add stencil relief elements in strategic locations</li>
+        <li>Finish with antiquing glaze for cohesion</li>
+      </ul>
+    </li>
+    <li><strong>Framed panels + technique infill</strong>:
+      <ul>
+        <li>Install molding panel structure</li>
+        <li>Apply different technique in each panel</li>
+        <li>Maintain color cohesion across variations</li>
+      </ul>
+    </li>
+    <li><strong>Geometric base + organic overlay</strong>:
+      <ul>
+        <li>Create geometric tape pattern as base</li>
+        <li>Overstamp with organic motif in select areas</li>
+        <li>Creates structured/natural contrast</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h3>10.2 Scale and Proportion</h3>
+  <p><strong>Guidelines for technique selection by wall size:</strong></p>
+  <table>
+    <tr><th>Wall Area</th><th>Appropriate Techniques</th><th>Techniques to Avoid</th></tr>
+    <tr><td>Small (<6 m²)</td><td>Fine stencils, small stamps, subtle texture</td><td>Large geometric patterns, heavy texture</td></tr>
+    <tr><td>Medium (6–12 m²)</td><td>All techniques appropriate</td><td>None</td></tr>
+    <tr><td>Large (>12 m²)</td><td>Bold patterns, large-scale relief, geometric</td><td>Very fine detail (gets lost)</td></tr>
+  </table>
+
+  <p><strong>Pattern scale recommendations:</strong></p>
+  <ul>
+    <li><strong>Small rooms</strong>: Pattern repeat 15–30 cm for visual interest without overwhelming</li>
+    <li><strong>Large rooms</strong>: Pattern repeat 30–90 cm for appropriate scale</li>
+    <li><strong>Feature walls</strong>: Can accommodate larger, bolder patterns than surrounding walls</li>
+  </ul>
+
+  <h3>10.3 Architectural Style Compatibility</h3>
+  <table>
+    <tr><th>Architectural Style</th><th>Recommended Techniques</th><th>Appropriate Aesthetics</th></tr>
+    <tr><td>Traditional/Colonial</td><td>Framed panels, classic stencils</td><td>Formal, symmetrical patterns</td></tr>
+    <tr><td>Modern/Contemporary</td><td>Geometric tape work, minimal texture</td><td>Clean lines, monochromatic schemes</td></tr>
+    <tr><td>Industrial</td><td>Raw texture rolling, concrete effects</td><td>Exposed materials aesthetic</td></tr>
+    <tr><td>Bohemian/Eclectic</td><td>Hand stamping, organic patterns</td><td>Mixed motifs, rich colors</td></tr>
+    <tr><td>Scandinavian</td><td>Subtle texture, light geometric</td><td>Muted tones, simple forms</td></tr>
+    <tr><td>Mediterranean</td><td>Relief stenciling, antiqued finishes</td><td>Warm colors, organic shapes</td></tr>
+  </table>
+</article>
+
+<article>
+  <h2>11. Specialized Applications</h2>
+  
+  <h3>11.1 High-Humidity Environments</h3>
+  <p><strong>Modifications for bathrooms and kitchens:</strong></p>
+  <ul>
+    <li>Use mildew-resistant paint formulations</li>
+    <li>Apply mold-inhibiting primer before decorative finish</li>
+    <li>Seal all relief work with water-resistant sealer</li>
+    <li>Avoid porous materials (unsealed wood stamps)</li>
+    <li>Ensure adequate ventilation during cure</li>
+  </ul>
+
+  <h3>11.2 High-Traffic Zones</h3>
+  <p><strong>Durability enhancements:</strong></p>
+  <ul>
+    <li>Use semi-gloss or satin base coat</li>
+    <li>Apply two coats of polyurethane sealer</li>
+    <li>Avoid relief work below 1 meter height</li>
+    <li>Consider washable wallcovering for extreme traffic</li>
+    <li>Test cleaning protocol on sample before committing</li>
+  </ul>
+
+  <h3>11.3 Rental-Friendly Techniques</h3>
+  <p><strong>Reversible applications:</strong></p>
+  <ul>
+    <li>Use only painter's tape methods (fully reversible)</li>
+    <li>Apply temporary wallpaper behind framed panels</li>
+    <li>Mount removable panels using Command strips</li>
+    <li>Document original wall condition with photos</li>
+    <li>Test adhesive removal on inconspicuous area first</li>
+  </ul>
+</article>
+
+<article>
+  <h2>12. Professional Considerations</h2>
+  
+  <h3>12.1 When to Hire a Professional</h3>
+  <p>Consider professional assistance for:</p>
+  <ul>
+    <li>Walls exceeding 20 m² for complex techniques</li>
+    <li>Historic homes requiring period-appropriate finishes</li>
+    <li>Structural concerns (cracks, moisture issues)</li>
+    <li>Desired techniques requiring specialized equipment</li>
+    <li>Limited project timeline with quality requirements</li>
+  </ul>
+
+  <h3>12.2 Quality Standards for Self-Execution</h3>
+  <p><strong>Acceptable standards for DIY work:</strong></p>
+  <ul>
+    <li>Variation in pattern spacing: ±10 mm acceptable</li>
+    <li>Minor bleed under tape: <2 mm not visible from 2 meters</li>
+    <li>Slight relief irregularity: Natural; adds character</li>
+    <li>Color consistency: Within single batch of custom-mixed paint</li>
+  </ul>
+
+  <p><strong>Professional standards:</strong></p>
+  <ul>
+    <li>Pattern spacing: ±2 mm precision</li>
+    <li>Zero visible bleed</li>
+    <li>Mechanical consistency in relief work</li>
+    <li>Perfect color matching across multiple batches</li>
+  </ul>
+</article>
+
+<footer>
+  <div>
+    End of Dossier • Version 2.0 Extended • Last updated: October 17, 2025
+  </div>
+</footer>
+
+</body>
+<script>
+  // ============================================
+  // PERFORMANCE OPTIMIZATION & INITIALIZATION
+  // ============================================
+  
+  (function() {
+    'use strict';
+    
+    // Defer non-critical operations until DOM is fully loaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+    
+    function init() {
+      initIntersectionObserver();
+      initSmoothScrolling();
+      initParticleCanvas();
+      initImageLazyLoading();
+      initTableEnhancements();
+      initCopyCodeButtons();
+      initReadingProgress();
+      initKeyboardNavigation();
+      optimizePerformance();
+    }
+    
+    // ============================================
+    // INTERSECTION OBSERVER - SCROLL ANIMATIONS
+    // ============================================
+    
+    function initIntersectionObserver() {
+      // Fade-in animation for sections on scroll
+      const observerOptions = {
+        root: null,
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      };
+      
+      const animateOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '0';
+            entry.target.style.transform = 'translateY(30px)';
+            
+            // Trigger animation
+            requestAnimationFrame(() => {
+              entry.target.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            });
+            
+            // Unobserve after animation to improve performance
+            animateOnScroll.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // Observe all major content blocks
+      const elementsToAnimate = document.querySelectorAll('section, article, header');
+      elementsToAnimate.forEach((el, index) => {
+        el.style.transitionDelay = `${index * 0.1}s`;
+        animateOnScroll.observe(el);
+      });
+      
+      // Animate individual elements within sections
+      const detailObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-element');
+            detailObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      
+      document.querySelectorAll('h2, h3, table, .note, pre').forEach(el => {
+        detailObserver.observe(el);
+      });
+    }
+    
+    // ============================================
+    // PARTICLE CANVAS SYSTEM
+    // ============================================
+    
+    function initParticleCanvas() {
+      const canvas = document.createElement('canvas');
+      canvas.id = 'particleCanvas';
+      canvas.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+        opacity: 0.4;
+      `;
+      document.body.insertBefore(canvas, document.body.firstChild);
+      
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      let animationFrameId;
+      
+      // Responsive canvas sizing
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resizeCanvas();
+      
+      // Throttled resize handler for performance
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(resizeCanvas, 150);
+      }, { passive: true });
+      
+      // Particle class
+      class Particle {
+        constructor() {
+          this.reset();
+          this.y = Math.random() * canvas.height;
+          this.opacity = Math.random() * 0.5 + 0.3;
+        }
+        
+        reset() {
+          this.x = Math.random() * canvas.width;
+          this.y = -10;
+          this.size = Math.random() * 2 + 0.5;
+          this.speedY = Math.random() * 0.5 + 0.2;
+          this.speedX = (Math.random() - 0.5) * 0.3;
+          this.hue = Math.random() * 60 + 200; // Blues, purples, pinks
+        }
+        
+        update() {
+          this.y += this.speedY;
+          this.x += this.speedX;
+          
+          // Subtle wave motion
+          this.x += Math.sin(this.y * 0.01) * 0.2;
+          
+          // Reset if out of bounds
+          if (this.y > canvas.height + 10 || this.x < -10 || this.x > canvas.width + 10) {
+            this.reset();
+          }
+        }
+        
+        draw() {
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = `hsla(${this.hue}, 70%, 60%, ${this.opacity})`;
+          ctx.fill();
+          
+          // Add glow effect
+          ctx.shadowBlur = 8;
+          ctx.shadowColor = `hsla(${this.hue}, 70%, 60%, ${this.opacity * 0.5})`;
+        }
+      }
+      
+      // Create particles (fewer on mobile for performance)
+      const particleCount = window.innerWidth < 768 ? 30 : 60;
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+      
+      // Animation loop with performance optimization
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        particles.forEach(particle => {
+          particle.update();
+          particle.draw();
+        });
+        
+        animationFrameId = requestAnimationFrame(animate);
+      }
+      
+      // Pause animation when tab is not visible
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          cancelAnimationFrame(animationFrameId);
+        } else {
+          animate();
+        }
+      });
+      
+      animate();
+    }
+    
+    // ============================================
+    // SMOOTH SCROLLING
+    // ============================================
+    
+    function initSmoothScrolling() {
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href !== '#' && href.length > 1) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          }
+        });
+      });
+    }
+    
+    // ============================================
+    // LAZY LOADING FOR IMAGES
+    // ============================================
+    
+    function initImageLazyLoading() {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+            imageObserver.unobserve(img);
+          }
+        });
+      }, { rootMargin: '50px' });
+      
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    }
+    
+    // ============================================
+    // TABLE ENHANCEMENTS
+    // ============================================
+    
+    function initTableEnhancements() {
+      document.querySelectorAll('table').forEach(table => {
+        // Add hover effect to highlight entire row
+        const rows = table.querySelectorAll('tbody tr');
+        rows.forEach(row => {
+          row.addEventListener('mouseenter', function() {
+            this.style.background = 'rgba(102, 126, 234, 0.08)';
+          });
+          row.addEventListener('mouseleave', function() {
+            this.style.background = '';
+          });
+        });
+        
+        // Make tables keyboard accessible
+        table.setAttribute('tabindex', '0');
+      });
+    }
+    
+    // ============================================
+    // COPY CODE BUTTONS
+    // ============================================
+    
+    function initCopyCodeButtons() {
+      document.querySelectorAll('pre').forEach(pre => {
+        const button = document.createElement('button');
+        button.textContent = 'Copy';
+        button.style.cssText = `
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          padding: 6px 12px;
+          background: linear-gradient(135deg, #667eea, #764ba2);
+          color: white;
+          border: none;
+          border-radius: 6px;
+          font-size: 0.85em;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          font-family: var(--font-body);
+          font-weight: 500;
+        `;
+        
+        pre.style.position = 'relative';
+        pre.appendChild(button);
+        
+        pre.addEventListener('mouseenter', () => button.style.opacity = '1');
+        pre.addEventListener('mouseleave', () => button.style.opacity = '0');
+        
+        button.addEventListener('click', () => {
+          const code = pre.querySelector('code')?.textContent || pre.textContent;
+          navigator.clipboard.writeText(code).then(() => {
+            button.textContent = 'Copied!';
+            setTimeout(() => button.textContent = 'Copy', 2000);
+          });
+        });
+      });
+    }
+    
+    // ============================================
+    // READING PROGRESS BAR
+    // ============================================
+    
+    function initReadingProgress() {
+      const progressBar = document.createElement('div');
+      progressBar.id = 'readingProgress';
+      progressBar.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+        z-index: 9999;
+        transition: width 0.1s ease;
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+      `;
+      document.body.appendChild(progressBar);
+      
+      // Throttled scroll handler
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            progressBar.style.width = progress + '%';
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }, { passive: true });
+    }
+    
+    // ============================================
+    // KEYBOARD NAVIGATION
+    // ============================================
+    
+    function initKeyboardNavigation() {
+      document.addEventListener('keydown', (e) => {
+        // Ctrl/Cmd + Up = scroll to top
+        if ((e.ctrlKey || e.metaKey) && e.key === 'ArrowUp') {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Ctrl/Cmd + Down = scroll to bottom
+        if ((e.ctrlKey || e.metaKey) && e.key === 'ArrowDown') {
+          e.preventDefault();
+          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+      });
+    }
+    
+    // ============================================
+    // PERFORMANCE OPTIMIZATIONS
+    // ============================================
+    
+    function optimizePerformance() {
+      // Prefetch external links on hover
+      document.querySelectorAll('a[href^="http"]').forEach(link => {
+        link.addEventListener('mouseenter', function() {
+          const url = this.href;
+          const prefetch = document.createElement('link');
+          prefetch.rel = 'prefetch';
+          prefetch.href = url;
+          document.head.appendChild(prefetch);
+        }, { once: true, passive: true });
+      });
+      
+      // Reduce motion for users with accessibility preferences
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.style.setProperty('scroll-behavior', 'auto');
+        document.querySelectorAll('*').forEach(el => {
+          el.style.animation = 'none';
+          el.style.transition = 'none';
+        });
+      }
+    }
+    
+    // ============================================
+    // DYNAMIC CSS ANIMATIONS
+    // ============================================
+    
+    // Add reveal animation styles
+    const style = document.createElement('style');
+    style.textContent = `
+      .reveal-element {
+        animation: revealUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      }
+      
+      @keyframes revealUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* Smooth focus styles for accessibility */
+      *:focus-visible {
+        outline: 2px solid #667eea;
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+      
+      /* Loading skeleton for images */
+      img:not([src]) {
+        background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+      }
+      
+      @keyframes loading {
+        0% { background-position: 200% 0; }
+        100% { background-position: -200% 0; }
+      }
+    `;
+    document.head.appendChild(style);
+    
+  })();
+</script>
+</html>
