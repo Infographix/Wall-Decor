@@ -1,6 +1,7 @@
 # **Methods and Protocols for Decorative Wall Design**  
 *A Professional-Grade Technical Reference for Non-Structural Decorative Wall Treatments Using Accessible Materials and Standardized Protocols*
 
+![https://infographix.github.io/Wall-Decor/][https://infographix.github.io/Wall-Decor/]
 ---
 
 ## 📘 **About This Project**
